@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>answer each question and then read the bottom message!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #4a6741;
+      text-align: center;
+      padding: 50px 20px;
+      margin: 0;
+    }
+
+    .question-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 450px;
+      margin: 20px auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 8px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      cursor: pointer;
+      background-color: #4a6741;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #4a6741;
+    }
+
+    .answer {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #4a6741;
+    }
+
+    .home-link {
+      display: block;
+      margin-top: 40px;
+      text-decoration: none;
+      color: white;
+      font-size: 14px;
+    }
+
+    .home-link:hover {
+      text-decoration: underline;
+    }
+
+    .extra-text {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 18px;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Question 1 -->
+  <div class="question-box">
+    <h3>1. How do you spell the name of this month?</h3>
+    <input type="text" id="answer1" placeholder="Type your answer">
+    <button onclick="revealAnswer(1)">Submit</button>
+    <div id="response1" class="answer"></div>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="question-box">
+    <h3>2. Why do you do outreach?</h3>
+    <input type="text" id="answer2" placeholder="Type your answer">
+    <button onclick="revealAnswer(2)">Submit</button>
+    <div id="response2" class="answer"></div>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="question-box">
+    <h3>3. How does motion sensor really work?</h3>
+    <input type="text" id="answer3" placeholder="Type your answer">
+    <button onclick="revealAnswer(3)">Submit</button>
+    <div id="response3" class="answer"></div>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="question-box">
+    <h3>4. Unscramble this word: incribdesable</h3>
+    <input type="text" id="answer4" placeholder="Type your answer">
+    <button onclick="revealAnswer(4)">Submit</button>
+    <div id="response4" class="answer"></div>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="question-box">
+    <h3>4. What does the sun, you, and your espresso you have in the morning all have in common?</h3>
+    <input type="text" id="answer5" placeholder="Type your answer">
+    <button onclick="revealAnswer(5)">Submit</button>
+    <div id="response5" class="answer"></div>
+  </div>
+
+  <div class="extra-text">
+    💌 The essense of each of these questions is to get at just some of the things that I think of what I think of you. When I think of you, I just think of love and when I think of 
+    why I love you I just think of because you are you! And you happen to be silly, kind, curious, indescribable, hot, and just everything. i love you simon!
+  </div>
+
+
+  <a href="mainpage.html" class="home-link">🏠 home</a>
+
+  <script>
+    // Predefined answers/messages for each question
+    const answers = {
+      1: "surely you spelled it correctly...right? no judgement because i mispell it a lot (ther are a lot of typos on this website).",
+      2: "regardless of what your answer is, i asked this question to just point out one example of how warm-hearted you truly are. i like that you are a combination of a grumpy old man and the sweetest person ever.",
+      3: "i'm not really sure like truly how it works. is it sound waves? idk or just as simple as a light sensor? but how is it triggered? we should figure this out together.",
+      4: "indescribable. that is what you are",
+      5: "all of these things are hot"
+    };
+
+    function revealAnswer(qNumber) {
+      const inputId = "answer" + qNumber;
+      const responseId = "response" + qNumber;
+      const userInput = document.getElementById(inputId).value.trim();
+      
+      // You can display user input if you like, or just show your predefined answer
+      document.getElementById(responseId).textContent = answers[qNumber];
+    }
+  </script>
+
+</body>
+</html>

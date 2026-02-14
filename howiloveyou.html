@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>answer this question 💭</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #725752;
+      text-align: center;
+      padding-top: 120px;
+      margin: 0;
+    }
+
+    .box {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      width: 450px;
+      margin: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: normal;
+    }
+
+    input {
+      padding: 12px;
+      font-size: 16px;
+      width: 85%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 10px 18px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      cursor: pointer;
+      background-color: #725752;
+      color: white;
+    }
+
+    button:hover {
+      background-color: #725752;
+    }
+
+    .home-link {
+      display: block;
+      margin-top: 30px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .home-link:hover {
+      text-decoration: underline;
+    }
+
+    .video-section {
+    margin-top: 50px;
+    text-align: center;
+    }
+
+    .video-section video {
+    width: 70%;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>what do you think i think about when i think of you?</h2>
+
+    <input type="text" id="answer" placeholder="type your answer here">
+    <br>
+    <button onclick="revealAnswer()">Submit</button>
+
+    <a href="mainpage.html" class="home-link">🏠 home</a>
+  </div>
+
+    <div class="video-section">
+    <video controls>
+        <source src="videos/ily_video.mp4" type="video/mp4">
+        watch this video to hear more.
+    </video>
+    </div>
+
+  <script>
+    function revealAnswer() {
+      document.querySelector(".box").innerHTML = `
+        <h2 style="font-size: 32px; color: #333;">love</h2>
+        <p style="margin-top:20px;">
+          if different, i bet your answer was also correct, but you encompass what love truly is!
+          watch the videos below to hear more (i look absolutely awful so you know that I am saying them at especially authentic times)!
+          i didn't annotate the videos (because i wanted to every 5 seconds) but i hop eyou enjoy some raw emotion lol.
+        </p>
+        <a href="mainpage.html" class="home-link">🏠 Back Home</a>
+      `;
+    }
+  </script>
+
+</body>
+</html>

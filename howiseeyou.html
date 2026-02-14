@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>how i see you</title>
+  <style>
+
+    .home-container {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .home-icon {
+      text-decoration: none;
+      font-size: 18px;
+      color: #003366;
+      font-weight: bold;
+    }
+
+    .home-icon:hover {
+      text-decoration: underline;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #D7E5F0;
+      margin: 0;
+      padding: 40px;
+      text-align: center;
+    }
+
+    /* Wrapper for slider and intro */
+    .slider-wrapper {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;  /* stack paragraph and slider */
+      justify-content: center; /* vertical centering of content */
+      align-items: center;     /* horizontal centering */
+    }
+
+    /* Intro paragraph just above slider */
+    p.intro {
+      font-size: 18px;
+      margin-bottom: 50px;  /* controls distance between text and slider */
+    }
+
+    /* Slider container */
+    .photo-slider {
+      overflow: hidden;
+      width: 80%;            /* slider width */
+      margin: 0 auto;
+    }
+
+    /* Track that moves */
+    .photo-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 25s linear infinite;
+    }
+
+    /* Photo link wrapper */
+    .photo-link {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+    }
+
+    /* Each photo with overlay */
+    .photo-container {
+      position: relative;
+      margin-right: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .photo-container img {
+      display: block;
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+    }
+
+    /* Zoom effect on hover */
+    .photo-container:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Overlay text */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    /* Show overlay on hover */
+    .photo-container:hover .overlay {
+      opacity: 1;
+    }
+
+    /* Pause animation on hover */
+    .photo-slider:hover .photo-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slider-wrapper">
+
+    <div class="home-container">
+    <a href="mainpage.html" class="home-icon">🏠 home</a>
+    </div>
+
+    <!-- Intro paragraph above slider -->
+    <p class="intro">Click or hover over photos to learn what you look like through my eyes!</p>
+
+    <!-- Slider -->
+    <div class="photo-slider">
+      <div class="photo-track">
+
+        <!-- Photo 1 -->
+        <a href="./howiseeyou/image1.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_7902.jpg" alt="Photo 1">
+            <div class="overlay"><p>your smile is all i need</p></div>
+          </div>
+        </a>
+
+        <!-- Photo 2 -->
+        <a href="./howiseeyou/image2.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_lib.jpg" alt="Photo 2">
+            <div class="overlay"><p>i'll meet you any and everywhere</p></div>
+          </div>
+        </a>
+
+        <!-- Photo 3 -->
+        <a href="./howiseeyou/image3.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_8882.jpg" alt="Photo 3">
+            <div class="overlay"><p>you make my vision blurry and clear</p></div>
+          </div>
+        </a>
+
+        <!-- Photo 4 -->
+        <a href="./howiseeyou/image4.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_9102.jpg" alt="Photo 4">
+            <div class="overlay"><p>the way you hold things!!</p></div>
+          </div>
+        </a>
+
+        <!-- Photo 5 -->
+        <a href="./howiseeyou/image5.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_9563.jpg" alt="Photo 5">
+            <div class="overlay"><p>your eyes make my heart ache</p></div>
+          </div>
+        </a>
+
+        <!-- Repeat photos for smooth scrolling -->
+        <a href="./howiseeyou/image1.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_7902.jpg" alt="Photo 1">
+            <div class="overlay"><p>your smile is all i need</p></div>
+          </div>
+        </a>
+
+        <a href="./howiseeyou/image2.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_lib.jpg" alt="Photo 2">
+            <div class="overlay"><p>i'll meet you any and everywhere</p></div>
+          </div>
+        </a>
+
+        <a href="./howiseeyou/image3.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_8882.jpg" alt="Photo 3">
+            <div class="overlay"><p>you both perfect and blur my vision</p></div>
+          </div>
+        </a>
+
+        <a href="./howiseeyou/image4.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_9102.jpg" alt="Photo 4">
+            <div class="overlay"><p>the way you hold things!!</p></div>
+          </div>
+        </a>
+
+        <a href="./howiseeyou/image5.html" class="photo-link">
+          <div class="photo-container">
+            <img src="images/IMG_9563.jpg" alt="Photo 5">
+            <div class="overlay"><p>your eyes make my heart ache</p></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
